@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Project_Narc (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Project_Narc (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
