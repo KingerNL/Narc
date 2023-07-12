@@ -285,3 +285,7 @@ D:\Github\Narc\Project_Narc\Project_Narc\obj\x86\Debug\net6.0-windows10.0.19041.
 D:\Github\Narc\Project_Narc\Project_Narc\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\qualifiers.txt.intermediate
 D:\Github\Narc\Project_Narc\Project_Narc\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\MultipleQualifiersPerDimensionFound.txt
 D:\Github\Narc\Project_Narc\Project_Narc\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\ProjectArchitectures.txt
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Syncfusion.Compression.Portable.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Syncfusion.Licensing.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Syncfusion.OfficeChart.Portable.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Syncfusion.Presentation.Portable.dll

@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Ety3vpkfVRk5sw8D0OF6CxYfbQTwb1pqtVAs3KyKUgADKRk1P0Tv6LpaHoH5PLHwooA6ghoChi4lzsW9lHKtEQ==",
+  "dgSpecHash": "7hE4chuEdzDA/K+2LDBs/F/8/dGUny4b/Vq0cWyeuEW2DB3U6M+WnxTN3SRO/5KpGD8c61ZrYYc7LI9pCFttbA==",
   "success": true,
   "projectFilePath": "D:\\Github\\Narc\\Project_Narc\\Project_Narc\\Project_Narc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mart\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.755\\microsoft.windows.sdk.buildtools.10.0.22621.755.nupkg.sha512",
     "C:\\Users\\mart\\.nuget\\packages\\microsoft.windowsappsdk\\1.3.230502000\\microsoft.windowsappsdk.1.3.230502000.nupkg.sha512",
+    "C:\\Users\\mart\\.nuget\\packages\\syncfusion.compression.net.core\\22.1.38\\syncfusion.compression.net.core.22.1.38.nupkg.sha512",
+    "C:\\Users\\mart\\.nuget\\packages\\syncfusion.licensing\\22.1.38\\syncfusion.licensing.22.1.38.nupkg.sha512",
+    "C:\\Users\\mart\\.nuget\\packages\\syncfusion.officechart.net.core\\22.1.38\\syncfusion.officechart.net.core.22.1.38.nupkg.sha512",
+    "C:\\Users\\mart\\.nuget\\packages\\syncfusion.presentation.net.core\\22.1.38\\syncfusion.presentation.net.core.22.1.38.nupkg.sha512",
     "C:\\Users\\mart\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.20\\microsoft.netcore.app.runtime.win-x86.6.0.20.nupkg.sha512",
     "C:\\Users\\mart\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512",
     "C:\\Users\\mart\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.20\\microsoft.aspnetcore.app.runtime.win-x86.6.0.20.nupkg.sha512",

@@ -760,6 +760,18 @@
     <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\microsoft.windowsappsdk\1.3.230502000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Release.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Release.Net.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\syncfusion.compression.net.core\22.1.38\lib\net6.0\Syncfusion.Compression.Portable.dll">
+      <PackagePath>Syncfusion.Compression.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\syncfusion.licensing\22.1.38\lib\net6.0\Syncfusion.Licensing.dll">
+      <PackagePath>Syncfusion.Licensing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\syncfusion.officechart.net.core\22.1.38\lib\net6.0\Syncfusion.OfficeChart.Portable.dll">
+      <PackagePath>Syncfusion.OfficeChart.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\syncfusion.presentation.net.core\22.1.38\lib\net6.0\Syncfusion.Presentation.Portable.dll">
+      <PackagePath>Syncfusion.Presentation.Portable.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\microsoft.windowsappsdk\1.3.230502000\runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
     </AppxPackagedFile>
