@@ -289,3 +289,8 @@ D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.
 D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Syncfusion.Licensing.dll
 D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Syncfusion.OfficeChart.Portable.dll
 D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Syncfusion.Presentation.Portable.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\runtimes\win-x86\native\WebView2Loader.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Microsoft.Web.WebView2.Core.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Microsoft.Web.WebView2.WinForms.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Microsoft.Web.WebView2.Wpf.dll
+D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WebView2Loader.dll

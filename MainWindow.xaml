@@ -6,12 +6,13 @@
     xmlns:local="using:Project_Narc"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <Grid x:Name="AppTitleBar">
         <Grid.RowDefinitions>
-            <RowDefinition/>
             <RowDefinition Height="100"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -27,9 +28,17 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        
+        <TextBox Name="addressBar" Width="200" Grid.Column="1" Margin="15, 35, 15, 15" VerticalAlignment="Center" FontSize="15" KeyDown="addressBar_KeyDown"/>
+        
+        <controls:WebView2 x:Name="MyWebView"  Grid.RowSpan="2" Source="https://www.google.com" Margin="15" />
 
-        <Rectangle Fill="White" Margin="15" RadiusX="10" RadiusY="10" Grid.RowSpan="2"/>
-        <Rectangle Fill="Green"     Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Width="200"/>
-        <Rectangle Fill="Orange"    Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Grid.Row="1"    />
+        <Rectangle Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Grid.Row="1">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="black" Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
     </Grid>
 </Window>

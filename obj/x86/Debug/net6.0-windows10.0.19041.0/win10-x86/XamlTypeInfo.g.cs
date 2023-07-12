@@ -224,21 +224,33 @@ namespace Project_Narc.Project_Narc_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[12];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "Project_Narc.MainWindow";
-            _typeNameTable[5] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[4] = "Microsoft.UI.Xaml.Controls.WebView2";
+            _typeNameTable[5] = "Microsoft.UI.Xaml.FrameworkElement";
+            _typeNameTable[6] = "System.Uri";
+            _typeNameTable[7] = "Microsoft.Web.WebView2.Core.CoreWebView2";
+            _typeNameTable[8] = "Windows.UI.Color";
+            _typeNameTable[9] = "System.ValueType";
+            _typeNameTable[10] = "Project_Narc.MainWindow";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.Window";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[12];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::Project_Narc.MainWindow);
-            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[4] = typeof(global::Microsoft.UI.Xaml.Controls.WebView2);
+            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
+            _typeTable[6] = typeof(global::System.Uri);
+            _typeTable[7] = typeof(global::Microsoft.Web.WebView2.Core.CoreWebView2);
+            _typeTable[8] = typeof(global::Windows.UI.Color);
+            _typeTable[9] = typeof(global::System.ValueType);
+            _typeTable[10] = typeof(global::Project_Narc.MainWindow);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Window);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -274,7 +286,8 @@ namespace Project_Narc.Project_Narc_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_4_MainWindow() { return new global::Project_Narc.MainWindow(); }
+        private object Activate_4_WebView2() { return new global::Microsoft.UI.Xaml.Controls.WebView2(); }
+        private object Activate_10_MainWindow() { return new global::Project_Narc.MainWindow(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -313,14 +326,52 @@ namespace Project_Narc.Project_Narc_XamlTypeInfo
                 xamlType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  Project_Narc.MainWindow
+            case 4:   //  Microsoft.UI.Xaml.Controls.WebView2
+                userType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
+                userType.Activator = Activate_4_WebView2;
+                userType.AddMemberName("Source");
+                userType.AddMemberName("CanGoBack");
+                userType.AddMemberName("CanGoForward");
+                userType.AddMemberName("CoreWebView2");
+                userType.AddMemberName("DefaultBackgroundColor");
+                xamlType = userType;
+                break;
+
+            case 5:   //  Microsoft.UI.Xaml.FrameworkElement
+                xamlType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  System.Uri
+                userType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Microsoft.Web.WebView2.Core.CoreWebView2
+                userType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Color
+                userType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 9:   //  System.ValueType
+                userType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 10:   //  Project_Narc.MainWindow
                 userType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_4_MainWindow;
+                userType.Activator = Activate_10_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Microsoft.UI.Xaml.Window
+            case 11:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -392,6 +443,51 @@ namespace Project_Narc.Project_Narc_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.XamlControlsResources)instance;
             that.UseCompactResources = (global::System.Boolean)Value;
         }
+        private object get_1_WebView2_Source(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            return that.Source;
+        }
+        private void set_1_WebView2_Source(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            that.Source = (global::System.Uri)Value;
+        }
+        private object get_2_WebView2_CanGoBack(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            return that.CanGoBack;
+        }
+        private void set_2_WebView2_CanGoBack(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            that.CanGoBack = (global::System.Boolean)Value;
+        }
+        private object get_3_WebView2_CanGoForward(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            return that.CanGoForward;
+        }
+        private void set_3_WebView2_CanGoForward(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            that.CanGoForward = (global::System.Boolean)Value;
+        }
+        private object get_4_WebView2_CoreWebView2(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            return that.CoreWebView2;
+        }
+        private object get_5_WebView2_DefaultBackgroundColor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            return that.DefaultBackgroundColor;
+        }
+        private void set_5_WebView2_DefaultBackgroundColor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.WebView2)instance;
+            that.DefaultBackgroundColor = (global::Windows.UI.Color)Value;
+        }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -406,6 +502,40 @@ namespace Project_Narc.Project_Narc_XamlTypeInfo
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_0_XamlControlsResources_UseCompactResources;
                 xamlMember.Setter = set_0_XamlControlsResources_UseCompactResources;
+                break;
+            case "Microsoft.UI.Xaml.Controls.WebView2.Source":
+                userType = (global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.WebView2");
+                xamlMember = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlMember(this, "Source", "System.Uri");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_1_WebView2_Source;
+                xamlMember.Setter = set_1_WebView2_Source;
+                break;
+            case "Microsoft.UI.Xaml.Controls.WebView2.CanGoBack":
+                userType = (global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.WebView2");
+                xamlMember = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlMember(this, "CanGoBack", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_2_WebView2_CanGoBack;
+                xamlMember.Setter = set_2_WebView2_CanGoBack;
+                break;
+            case "Microsoft.UI.Xaml.Controls.WebView2.CanGoForward":
+                userType = (global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.WebView2");
+                xamlMember = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlMember(this, "CanGoForward", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_3_WebView2_CanGoForward;
+                xamlMember.Setter = set_3_WebView2_CanGoForward;
+                break;
+            case "Microsoft.UI.Xaml.Controls.WebView2.CoreWebView2":
+                userType = (global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.WebView2");
+                xamlMember = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlMember(this, "CoreWebView2", "Microsoft.Web.WebView2.Core.CoreWebView2");
+                xamlMember.Getter = get_4_WebView2_CoreWebView2;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.WebView2.DefaultBackgroundColor":
+                userType = (global::Project_Narc.Project_Narc_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.WebView2");
+                xamlMember = new global::Project_Narc.Project_Narc_XamlTypeInfo.XamlMember(this, "DefaultBackgroundColor", "Windows.UI.Color");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_5_WebView2_DefaultBackgroundColor;
+                xamlMember.Setter = set_5_WebView2_DefaultBackgroundColor;
                 break;
             }
             return xamlMember;
