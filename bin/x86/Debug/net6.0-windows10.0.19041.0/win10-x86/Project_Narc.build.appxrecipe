@@ -793,6 +793,9 @@
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\Narc_First_Screen.png">
+      <PackagePath>Assets\Narc_First_Screen.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
     </AppxPackagedFile>

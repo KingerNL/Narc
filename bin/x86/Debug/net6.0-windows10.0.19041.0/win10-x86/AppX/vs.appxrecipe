@@ -29,13 +29,13 @@
     <AppXManifest Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-07-12T22:38:13.841</Modified>
+      <Modified>2023-07-13T11:49:34.721</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-07-12T22:38:13.536</Modified>
+      <Modified>2023-07-13T11:49:34.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Project_Narc.runtimeconfig.json">
       <PackagePath>Project_Narc.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Project_Narc.dll">
       <PackagePath>Project_Narc.dll</PackagePath>
-      <Modified>2023-07-12T22:38:13.336</Modified>
+      <Modified>2023-07-13T11:49:34.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>Project_Narc.exe</PackagePath>
-      <Modified>2023-07-12T22:38:13.422</Modified>
+      <Modified>2023-07-13T11:49:34.329</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\microsoft.web.webview2\1.0.1823.32\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -1056,6 +1056,10 @@
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2023-07-12T12:10:56.388</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\Narc_First_Screen.png">
+      <PackagePath>Assets\Narc_First_Screen.png</PackagePath>
+      <Modified>2023-07-12T22:39:19.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>

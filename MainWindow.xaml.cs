@@ -1,3 +1,4 @@
+using Microsoft.Web.WebView2.Core;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Data;
@@ -17,22 +18,25 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Core;
 using Microsoft.UI.Windowing;
 using Microsoft.UI;
-
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
+using Microsoft.UI.Xaml.Controls.Primitives;
+using System.Numerics;
 
 namespace Project_Narc
 {
     public sealed partial class MainWindow : Window
     {
-        private AppWindow m_AppWindow;
+        private readonly AppWindow m_AppWindow;
 
         public MainWindow()
         {
+
             this.InitializeComponent();
+            MyWebView.NavigationStarting += EnsureHttps;
 
             m_AppWindow = GetAppWindowForCurrentWindow();
             m_AppWindow.Title = "";
+
+            PopupRectangle.Translation += new Vector3(0, 0, 32);
 
             var titlebar = m_AppWindow.TitleBar;
             titlebar.IconShowOptions = IconShowOptions.HideIconAndSystemMenu;
@@ -47,8 +51,6 @@ namespace Project_Narc
             }
             else
             {
-                // In the case that title bar customization is not supported, hide the custom title bar
-                // element.
                 AppTitleBar.Visibility = Visibility.Collapsed;
             }
         }
@@ -68,7 +70,24 @@ namespace Project_Narc
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
 
-        private void addressBar_KeyDown(object sender, KeyRoutedEventArgs e){
+        private async void EnsureHttps(WebView2 sender, CoreWebView2NavigationStartingEventArgs args)
+        {
+            string uri = args.Uri;
+
+            // Remove "https://" and "www." prefixes from the displayed URL
+            string displayedUrl = uri.Replace("https://", string.Empty);
+            displayedUrl = displayedUrl.Replace("www.", string.Empty);
+
+            // Check if there is a trailing slash and hide it if present
+            if (displayedUrl.EndsWith("/"))
+            {
+                displayedUrl = displayedUrl.Substring(0, displayedUrl.Length - 1);
+            }
+
+            addressBar.Text = displayedUrl;
+        }
+
+        private void AddressBarKeyDown(object sender, KeyRoutedEventArgs e){
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
                 NavigateToAddress(sender, e);
@@ -76,9 +95,46 @@ namespace Project_Narc
             }
         }
 
-        private void NavigateToAddress(object sender, RoutedEventArgs e){
-            Uri targetUri = new Uri(addressBar.Text);
-            MyWebView.Source = targetUri;
+        private void NavigateToAddress(object sender, RoutedEventArgs e)
+        {
+            string uri = addressBar.Text;
+
+            if (!uri.StartsWith("https://") && !uri.StartsWith("http://"))
+            {
+                // Check if uri starts with "www."
+                if (uri.StartsWith("www."))
+                {
+                    bool isValidHTTPWebsite = Uri.TryCreate("http://" + uri, UriKind.Absolute, out Uri validatedHTTPUri);
+                    if (isValidHTTPWebsite)
+                    {
+                        MyWebView.Source = validatedHTTPUri;
+                    } else
+                    {
+                        bool isValidHTPPSWebsite = Uri.TryCreate("https://" + uri, UriKind.Absolute, out Uri validatedHTTPSUri);
+                        if (isValidHTPPSWebsite)
+                        {
+                            MyWebView.Source = validatedHTTPSUri;
+                        }
+                    }
+                }
+                else if (uri.EndsWith(".com"))
+                {
+                    bool isValidHTTPSWWWWebsite = Uri.TryCreate("https://www." + uri, UriKind.Absolute, out Uri validatedHTTPSWWWUri);
+                    if (isValidHTTPSWWWWebsite)
+                    {
+                        MyWebView.Source = validatedHTTPSWWWUri;
+                    }
+                } else
+                {
+                    string searchQuery = Uri.EscapeDataString(addressBar.Text);
+                    string googleSearchUrl = $"https://www.google.com/search?q={searchQuery}";
+                    MyWebView.Source = new Uri(googleSearchUrl);
+                }
+            }
+            else
+            {
+                MyWebView.Source = new Uri(uri);
+            }
         }
     }
 }

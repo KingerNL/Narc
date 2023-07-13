@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Window
     x:Class="Project_Narc.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -10,7 +10,7 @@
     xmlns:media="using:Microsoft.Toolkit.Uwp.UI.Media"
     mc:Ignorable="d">
 
-    <Grid x:Name="AppTitleBar">
+    <Grid x:ConnectionId='2' x:Name="AppTitleBar">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition />
@@ -30,13 +30,13 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <TextBox Name="addressBar" Width="200" Grid.Column="1" Margin="15, 35, 15, 15" VerticalAlignment="Center" FontSize="15" KeyDown="AddressBarKeyDown"/>
+        <TextBox x:ConnectionId='3' Name="addressBar" Width="200" Grid.Column="1" Margin="15, 35, 15, 15" VerticalAlignment="Center" FontSize="15"                            />
     
-        <Border x:Name="PopupRectangle" BorderBrush="Black" BorderThickness="0.1" CornerRadius="10" Grid.RowSpan="2"  Margin="15">
+        <Border x:ConnectionId='4' x:Name="PopupRectangle" BorderBrush="Black" BorderThickness="0.1" CornerRadius="10" Grid.RowSpan="2"  Margin="15">
             <Border.Shadow>
                 <ThemeShadow />
             </Border.Shadow>
-            <controls:WebView2 x:Name="MyWebView" Source="https://www.google.com" />
+            <controls:WebView2 x:ConnectionId='5' x:Name="MyWebView" Source="https://www.google.com" />
         </Border>
         
         <Rectangle Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Grid.Row="1">
@@ -48,3 +48,4 @@
 
     </Grid>
 </Window>
+
