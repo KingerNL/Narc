@@ -12,14 +12,17 @@
     <Grid x:Name="AppTitleBar">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
             <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="240"/>
         </Grid.ColumnDefinitions>
         
-        <Rectangle Grid.RowSpan="2" Grid.ColumnSpan="2">
+        <Rectangle Grid.RowSpan="5" Grid.ColumnSpan="2">
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="LightGreen" Offset="0.0" />
@@ -28,22 +31,43 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-
-        <TextBox Name="addressBar" Width="200" Grid.Column="1" Margin="15, 35, 15, 15" VerticalAlignment="Center" FontSize="15" KeyDown="AddressBarKeyDown"/>
     
-        <Border x:Name="PopupRectangle" BorderBrush="Black" BorderThickness="0.1" CornerRadius="10" Grid.RowSpan="2"  Margin="15">
+        <Border x:Name="PopupRectangle" BorderBrush="Black" BorderThickness="0.1" CornerRadius="10" Grid.RowSpan="5"  Margin="15">
             <Border.Shadow>
                 <ThemeShadow />
             </Border.Shadow>
             <controls:WebView2 x:Name="MyWebView" Source="https://www.google.com" />
         </Border>
+
+        <!-- Searchbar  grid: 1, row: 0 -->
+        <TextBox Name="addressBar" Grid.Column="1" Margin="15, 35, 15, 15" VerticalAlignment="Center" FontSize="15" KeyDown="AddressBarKeyDown"/>
         
+        <!-- Favorites grid: 1, row: 1 -->
         <Rectangle Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Grid.Row="1">
             <Rectangle.Fill>
                 <SolidColorBrush Color="black" Opacity="0.5"/>
             </Rectangle.Fill>
         </Rectangle>
+        
+        <!-- Bookmarked tabs grid 1, row: 2 -->
+        <Rectangle Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Grid.Row="2">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="black" Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
+        <!-- Open tabs grid 1, row 3-->
+        <Rectangle Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Grid.Row="3">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="black" Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
+        <!-- Spaces grid 1, row 4-->
+        <Rectangle Margin="15" RadiusX="10" RadiusY="10" Grid.Column="1" Grid.Row="4">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="black" Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Window>

@@ -29,13 +29,13 @@
     <AppXManifest Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-07-13T13:07:54.834</Modified>
+      <Modified>2023-07-13T14:21:31.644</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-07-13T13:07:54.427</Modified>
+      <Modified>2023-07-13T14:21:31.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Project_Narc.runtimeconfig.json">
       <PackagePath>Project_Narc.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Project_Narc.dll">
       <PackagePath>Project_Narc.dll</PackagePath>
-      <Modified>2023-07-13T13:07:54.058</Modified>
+      <Modified>2023-07-13T14:21:30.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>Project_Narc.exe</PackagePath>
-      <Modified>2023-07-13T13:07:54.125</Modified>
+      <Modified>2023-07-13T14:21:30.961</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\microsoft.web.webview2\1.0.1823.32\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -1052,6 +1052,10 @@
     <AppxPackagedFile Include="C:\Users\mart\.nuget\packages\microsoft.windowsappsdk\1.3.230502000\runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2023-04-28T12:59:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\2023-07-13 15-09-41.gif">
+      <PackagePath>Assets\2023-07-13 15-09-41.gif</PackagePath>
+      <Modified>2023-07-13T13:13:18.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\Narc\Project_Narc\Project_Narc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
